@@ -15,6 +15,7 @@
     "server:build": "npm run build --workspace=server",
     "client:build": "npm run build --workspace=client",
     "build": "npm run client:build && npm run server:build",
+    "vercel-build": "npm run build --workspace=client",
     "install:all": "npm install && npm install --workspace=client && npm install --workspace=server"
   },
   "keywords": [
