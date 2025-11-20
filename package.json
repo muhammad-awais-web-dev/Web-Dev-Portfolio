@@ -1,0 +1,33 @@
+{
+  "name": "mern-portfolio",
+  "version": "1.0.0",
+  "description": "MERN full-stack portfolio application",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "npm run dev --workspace=server",
+    "client:dev": "npm run dev --workspace=client",
+    "server:build": "npm run build --workspace=server",
+    "client:build": "npm run build --workspace=client",
+    "build": "npm run client:build && npm run server:build",
+    "install:all": "npm install && npm install --workspace=client && npm install --workspace=server"
+  },
+  "keywords": [
+    "mern",
+    "mongodb",
+    "express",
+    "react",
+    "nodejs",
+    "vercel"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
